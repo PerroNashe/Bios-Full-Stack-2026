@@ -39,15 +39,16 @@ for (let i = 1; i <= 30; i++) {
 Ejercicio 4:
 
 const N = 50;
-for (let i = 2; i <= N; i++) {
-  let esPrimo = true;
-  for (let j = 2; j < i; j++) {
-    if (i % j === 0) {
-      esPrimo = false;
-      break;
+
+for (let num = 2; num <= N; num++) {    
+    let esPrimo = true; 
+
+    for (let divisor = 2; divisor < num; divisor++) {
+        if (num % divisor === 0) {
+            esPrimo = false;
+            break;
+        }
     }
-  }
-  if (esPrimo) {
-    console.log(i);
-  }
+    
+    if (esPrimo) console.log(num);
 }
